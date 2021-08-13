@@ -1,0 +1,112 @@
+body {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+.track {
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+  margin: 100px auto;
+  position: relative;
+}
+
+.car {
+  height: 50px;
+  width: 100px;
+  background-color: red;
+  position: relative;
+  animation: move 5s ease infinite;
+}
+
+.wheel {
+  height: 10px;
+  width: 20px;
+  background-color: black;
+  position: absolute;
+}
+
+.front-left {
+  right: 10px;
+  top: -10px;
+}
+
+.front-right {
+  right: 10px;
+  bottom: -10px;
+}
+
+.back-left {
+  left: 10px;
+  top: -10px;
+}
+
+.back-right {
+  left: 10px;
+  bottom: -10px;
+}
+
+.start {
+  position: absolute;
+  top: -35px;
+  padding: 5px;
+  left: 25%;
+}
+
+.finish {
+  position: absolute;
+  top: 25%;
+  padding: 5px;
+  left: -45px;
+  transform: rotate(-90deg);
+}
+
+/* add in the keyframes here */
+@keyframes move {
+
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  22% {
+    transform: rotate(0deg)
+  }
+  
+  25% {
+    top: 0;
+    left: calc(100% - 75px);
+    transform: rotate(90deg)
+  }
+
+  47% {
+    transform: rotate(90deg)
+  }
+
+  50% {
+    left: calc(100% - 75px);
+    top: calc(100% - 50px);
+    transform: rotate(180deg)
+  }
+
+  72% {
+    transform: rotate(180deg)
+  }
+  
+  75% {
+    left: -25px;
+    top: calc(100% - 50px);
+    transform: rotate(270deg)
+
+  }
+
+  97% {
+    transform: rotate(270deg)
+  }
+
+  100% {
+    top: 0;
+    left: -25px;
+    transform: rotate(360deg)
+  }
+}
